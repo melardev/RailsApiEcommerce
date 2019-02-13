@@ -1,5 +1,5 @@
 # Introduction
-This is one of my E-commerce API app implementations. It is written in Java using Spring Boot and Hibernate as the main dependencies.
+This is one of my E-commerce API app implementations. It is written in Ruby On Rails.
 This is not a finished project by any means, but it has a valid enough shape to be git cloned and studied if you are interested in this topic.
 If you are interested in this project take a look at my other server API implementations I have made with:
 
