@@ -1,0 +1,2 @@
+module ProductsSharesHelper
+end

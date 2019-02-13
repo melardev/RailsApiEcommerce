@@ -1,0 +1,24 @@
+<% if notice %>
+  <aside id="notice"><%= notice %></aside>
+<% end %>
+
+<h1>Products</h1>
+
+
+<% @products.each do |product| %>
+
+  <%= image_tag(product.image_url, class: 'list_image') %>
+
+  <h1><%= product.title %></h1>
+
+  <%= truncate(strip_tags(product.description), length: 80) %>
+
+  <% if product_in_cart product %>
+    <%= link_to 'Remove from cart', remove_cart_item_path(product_id: product) %></li>
+  <% else %>
+    <%= link_to 'Add To Cart', add_cart_item_path(product_id: product) %></li>
+
+  <% end %>
+<% end %>
+</tbody>
+</table>

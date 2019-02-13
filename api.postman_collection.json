@@ -1,0 +1,1312 @@
+{
+	"info": {
+		"_postman_id": "da55a836-bfb4-4d56-a3a0-61bdb9cf45c6",
+		"name": "RoR Api Shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"postman\",\n    \"password\": \"password\",\n    \"password_confirmation\": \"password\",\n    \"email\": \"postman@ror_shop_api.com\",\n    \"first_name\": \"post\",\n    \"last_name\": \"man\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/users",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"postman\",\n    \"password\": \"password\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login As admin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"password\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/users/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "Get products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/products",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get product details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwb3N0bWFuIiwiaWF0IjoxNTQ2MTIzMjA1LCJleHAiOjE1NDYyMDk2MDV9.3EH278UUAfEg_1wTpzHy-iCRRRyC0CDKGMEBmPJ4ueHV0Yl5_glDZgZfSb9mZsgRXqKlq4RmOzjQ8WyrHZFoGQ"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/products/excepturi-eos-laboriosam-facere",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"excepturi-eos-laboriosam-facere"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get products by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwb3N0bWFuIiwiaWF0IjoxNTQ2MTIzMjA1LCJleHAiOjE1NDYyMDk2MDV9.3EH278UUAfEg_1wTpzHy-iCRRRyC0CDKGMEBmPJ4ueHV0Yl5_glDZgZfSb9mZsgRXqKlq4RmOzjQ8WyrHZFoGQ",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/products/by_id/46",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products",
+								"by_id",
+								"46"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Products",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwidXNlcl9pZCI6MSwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJleHAiOjE1NTUyNDk4ODAsImVtYWlsIjoiYWRtaW5Acm9yX3Nob3BfYXBpLmNvbSIsInVzZXJuYW1lIjoiYWRtaW4ifQ.4Hv_MCWnlYX9mA0-mnXNTOR_X3JJACiT6dsHIXRslKQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "images[]",
+									"type": "file",
+									"src": ""
+								},
+								{
+									"key": "name",
+									"value": "Cool Product",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "go buy it",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "200.00",
+									"type": "text"
+								},
+								{
+									"key": "stock",
+									"value": "50",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/products",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "Get my orders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwidXNlcl9pZCI6MSwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJleHAiOjE1NTUyNDcyNjQsImVtYWlsIjoiYWRtaW5Acm9yX3Nob3BfYXBpLmNvbSIsInVzZXJuYW1lIjoiYWRtaW4ifQ.9_MA4YSDASv-KVWJTr5QSaRwBMmfiw58fyxsfaCAA_Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/orders/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"orders",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create order authenticated reuse address",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwidXNlcl9pZCI6MSwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJleHAiOjE1NTUyNDk4ODAsImVtYWlsIjoiYWRtaW5Acm9yX3Nob3BfYXBpLmNvbSIsInVzZXJuYW1lIjoiYWRtaW4ifQ.4Hv_MCWnlYX9mA0-mnXNTOR_X3JJACiT6dsHIXRslKQ",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"address_id\": 13,\n\t\"cart_items\": [\n\t\t{\n\t\t\t\"id\": 2,\n\t\t\t\"quantity\": 3\n\t\t},\n\t\t{\n\t\t\t\"id\": 3,\n\t\t\t\"quantity\": 5\n\t\t}]\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/orders",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get order details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwidXNlcl9pZCI6MSwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJleHAiOjE1NTUyNDk4ODAsImVtYWlsIjoiYWRtaW5Acm9yX3Nob3BfYXBpLmNvbSIsInVzZXJuYW1lIjoiYWRtaW4ifQ.4Hv_MCWnlYX9mA0-mnXNTOR_X3JJACiT6dsHIXRslKQ"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/orders/43",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"orders",
+								"43"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create order new address",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwidXNlcl9pZCI6MSwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJleHAiOjE1NTUyNDk4ODAsImVtYWlsIjoiYWRtaW5Acm9yX3Nob3BfYXBpLmNvbSIsInVzZXJuYW1lIjoiYWRtaW4ifQ.4Hv_MCWnlYX9mA0-mnXNTOR_X3JJACiT6dsHIXRslKQ"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"card_number\": \"122-122\",\n\t\"first_name\": \"post\",\n\t\"last_name\": \"man\",\n\t\"address\": \"some street address\",\n\t\"city\": \"some city\",\n\t\"country\": \"some country\",\n\t\"zip_code\": \"some zipcode thing\",\n\t\"cart_items\": [\n\t\t{\n\t\t\t\"id\": 4,\n\t\t\t\"quantity\": 3\n\t\t},\n\t\t{\n\t\t\t\"id\": 5,\n\t\t\t\"quantity\": 5\n\t\t}]\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/orders",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create order new address Guest",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"card_number\": \"122-122\",\n\t\"first_name\": \"post\",\n\t\"last_name\": \"man\",\n\t\"address\": \"some street address\",\n\t\"city\": \"some city\",\n\t\"country\": \"some country\",\n\t\"zip_code\": \"some zipcode thing\",\n\t\"cart_items\": [\n\t\t{\n\t\t\t\"id\": 10,\n\t\t\t\"quantity\": 3\n\t\t},\n\t\t{\n\t\t\t\"id\": 9,\n\t\t\t\"quantity\": 5\n\t\t}]\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/orders",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "static",
+			"item": [
+				{
+					"name": "Get CSS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/Lenna.png",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"Lenna.png"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Image",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/uploads/tags/logo.jpg",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"uploads",
+								"tags",
+								"logo.jpg"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "orders",
+					"item": [
+						{
+							"name": "Latest",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/admin/orders",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Order",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"tracking_number\": \"0xbeef\",\n\t\"order_status\": \"DELIVERED\"\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/admin/orders/956",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"orders",
+										"956"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "roles",
+					"item": [
+						{
+							"name": "Get",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/admin/roles",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"roles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get by name",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/admin/roles/by_name/ROLE_USER",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"roles",
+										"by_name",
+										"ROLE_USER"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/admin/roles/by_id/1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"roles",
+										"by_id",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Role",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"ROLE_POSTMAN\",\n\t\"description\": \"for postman testers\"\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/admin/roles",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"roles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Role",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"name\": \"ROLE_POSTMAN\",\n\t\"description\": \"for postman testers updated\"\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/admin/roles/997",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"roles",
+										"997"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "Get",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/admin/users",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/admin/users/946",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"users",
+										"946"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get By Id Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/admin/users/946",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"users",
+										"946"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update User",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"postman\",\n    \"first_name\": \"post\",\n    \"last_name\": \"woman\",\n    \"email\": \"brand_new@email.com\",\n    \"password\": \"password\",\n    \"confirm_password\": \"new_password\"\n}"
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8080/api/admin/users/946",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"admin",
+										"users",
+										"946"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "dashboard",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/admin",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comments",
+			"item": [
+				{
+					"name": "Get comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/api/products/et-ut-dolor-et/comments",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"et-ut-dolor-et",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create comment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiZXhwIjoxNTUyMTU1ODEyLCJlbWFpbCI6ImFkbWluQHJvcl9zaG9wX2FwaS5jb20iLCJ1c2VybmFtZSI6ImFkbWluIn0.Hst39QvRBF_yOLG5OLLoKxhSsyxihQTAUnKudj-u5ao",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"content\": \"cool article\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/api/products/et-ut-dolor-et/comments",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"et-ut-dolor-et",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete comment",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiZXhwIjoxNTUyMTU1ODEyLCJlbWFpbCI6ImFkbWluQHJvcl9zaG9wX2FwaS5jb20iLCJ1c2VybmFtZSI6ImFkbWluIn0.Hst39QvRBF_yOLG5OLLoKxhSsyxihQTAUnKudj-u5ao"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/api/products/et-ut-dolor-et/comments/23",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"et-ut-dolor-et",
+								"comments",
+								"23"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update comment",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwiZXhwIjoxNTUyMTU1ODEyLCJlbWFpbCI6ImFkbWluQHJvcl9zaG9wX2FwaS5jb20iLCJ1c2VybmFtZSI6ImFkbWluIn0.Hst39QvRBF_yOLG5OLLoKxhSsyxihQTAUnKudj-u5ao"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"content\": \"cool article 333\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3000/api/products/et-ut-dolor-et/comments/24",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"products",
+								"et-ut-dolor-et",
+								"comments",
+								"24"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tags and categories",
+			"item": [
+				{
+					"name": "Get tags",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/tags",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tags"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Tag",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwidXNlcl9pZCI6MSwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJleHAiOjE1NTUyNDk4ODAsImVtYWlsIjoiYWRtaW5Acm9yX3Nob3BfYXBpLmNvbSIsInVzZXJuYW1lIjoiYWRtaW4ifQ.4Hv_MCWnlYX9mA0-mnXNTOR_X3JJACiT6dsHIXRslKQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "women",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "for women only",
+									"type": "text"
+								},
+								{
+									"key": "images[]",
+									"type": "file",
+									"src": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/tags",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tags"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwidXNlcl9pZCI6MSwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJleHAiOjE1NTUyNDk4ODAsImVtYWlsIjoiYWRtaW5Acm9yX3Nob3BfYXBpLmNvbSIsInVzZXJuYW1lIjoiYWRtaW4ifQ.4Hv_MCWnlYX9mA0-mnXNTOR_X3JJACiT6dsHIXRslKQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "women",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "for women only",
+									"type": "text"
+								},
+								{
+									"key": "images[]",
+									"type": "file",
+									"src": ""
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/categories",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/categories",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "addresses",
+			"item": [
+				{
+					"name": "My Addresses",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwidXNlcl9pZCI6MSwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJleHAiOjE1NTUyNDcyNjQsImVtYWlsIjoiYWRtaW5Acm9yX3Nob3BfYXBpLmNvbSIsInVzZXJuYW1lIjoiYWRtaW4ifQ.9_MA4YSDASv-KVWJTr5QSaRwBMmfiw58fyxsfaCAA_Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"postman\",\n    \"password\": \"password\"\n}"
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8080/api/addresses",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"addresses"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
