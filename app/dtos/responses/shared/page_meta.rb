@@ -1,7 +1,7 @@
 class PageMeta
 
   attr_accessor :has_next_page, :requested_page_size, :current_items_count, :current_page, :has_prev_page, :next_page_url, :offset,
-                :page_count, :total_items_count, :next_page_number, :prev_page_number, :prev_page_url
+                :number_of_pages, :total_items_count, :next_page_number, :prev_page_number, :prev_page_url
 
   def initialize(collection, total_items_count, base_path, page, page_size)
 =begin
@@ -20,7 +20,7 @@ class PageMeta
     json.next_page_url @page.next_page_url
 
     json.total_items_count @page.total_items_count
-    json.page_count @page.page_count
+    json.number_of_pages @page.number_of_pages
 =end
 
     @offset = (page - 1) * page_size
@@ -29,9 +29,9 @@ class PageMeta
     @total_items_count = total_items_count
     @current_page = page
     # Force the result of / to be float, with one .to_f is enough
-    @page_count = (@total_items_count.to_f / page_size.to_f).ceil
+    @number_of_pages = (@total_items_count.to_f / page_size.to_f).ceil
 
-    if @page_count >= @current_page
+    if @number_of_pages >= @current_page
       @has_next_page = true
     else
       @has_next_page = false

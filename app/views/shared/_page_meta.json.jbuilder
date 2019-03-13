@@ -15,5 +15,5 @@ json.prev_page_url page_meta.prev_page_url
 json.next_page_url page_meta.next_page_url
 
 json.total_items_count page_meta.total_items_count
-json.page_count page_meta.page_count
+json.number_of_pages page_meta.number_of_pages
 
